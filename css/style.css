@@ -1,0 +1,141 @@
+/* style.css */
+
+/* reset */
+*{ 
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+  }
+  ul{ list-style-type: none;}
+  a{ 
+    text-decoration: none;
+    color: #666;
+  }
+  
+  /* 공통 스타일 */
+  .clear { clear: both;}
+  .sub_title {
+    font-size: 24px;
+  }
+  
+  body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  /*  
+    page 폭: 1200px
+    main color: #35302d
+    sub color: #bf2428
+  */
+  
+  /* 헤더 영역 */
+  #main_header {
+    position: relative;
+    /* background: #ccc; */
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* 로고 사이즈 축소 */
+#main_header > h1 > a > img {
+    width: 10%
+  }
+  #main_header > h1 {
+    padding: 30px 0;
+  }
+  
+  /* 메인 메뉴 */
+  #main_gnb {
+    position: relative;
+    /* outline: 1px solid red; */
+    padding-top: 5px;
+  }
+  
+  /* 1단계 메뉴 */
+  #main_gnb > .depth1 > li {
+    position: relative;
+    float: left;
+    width: 25%;
+    /* outline: 1px solid red; */
+    line-height: 30px;
+    z-index: 999;
+  }
+  
+  #main_gnb > .depth1 > li > a {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+  }
+  
+  /* 호버시 메뉴 언더라인 효과 */
+  #main_gnb > .depth1 > li > a:hover {
+    border-bottom: 3px solid #7b422e;
+  }
+  
+  /* 2단계 메뉴 */
+  #main_gnb .depth2.show {
+    background: rgba(200,200,200,0.8);
+    height: 140px;
+    padding: 1em;
+    overflow: hidden;
+    /* outline: 1px solid green; */
+  }
+  
+  #main_gnb .depth2{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.4s;
+  }
+  
+  #main_gnb .depth2 a {
+    /* outline: 1px solid red; */
+    display: block;
+    font-weight: bold;;
+  }
+  #main_gnb .depth2 a:hover {
+    color: #bf2428;
+  }
+  
+  /* 매인 배너 */
+  #main_banner {
+    position: relative;
+    /* 가변이미지범위: 1200px ~ 1920(HD) */
+    min-width: 1200px;
+    max-width: 1920px;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    overflow: hidden;
+    /* background: #ccc; */
+    margin-bottom: 80px;
+  }
+  
+  #main_banner .slider img { width: 100%;}
+
+
+  #news {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+
+  #news > .news_list {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    padding: 15px;
+    padding-top: 50px;
+  }
+
+  #news > .news_list > h3 {
+    font-size: 28px;
+    color: #333;
+  }
